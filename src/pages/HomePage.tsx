@@ -4,18 +4,18 @@ import { ArrowRight, Star, Shield, Heart, Sparkles} from 'lucide-react';
 
 const services = [
   {
-    title: 'Aesthetic Dentistry',
-    desc: 'Bespoke smile design using the latest ceramic technologies and whitening protocols.',
+    title: 'Acero Inoxidable',
+    desc: 'Modern, durable pieces for daily wear with a polished premium finish.',
     img: 'https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-1.jpg'
   },
   {
-    title: 'Advanced Orthodontics',
-    desc: 'Precise tooth alignment for both aesthetics and functional perfection at any age.',
+    title: 'Plata 925',
+    desc: 'Timeless silver essentials crafted to elevate every look.',
     img: 'https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-2.jpg'
   },
   {
-    title: 'Oral Rehabilitation',
-    desc: 'Comprehensive restorative treatments to regain full function and confidence.',
+    title: 'Sets & Regalos',
+    desc: 'Curated gift-ready combinations for birthdays, anniversaries, and special moments.',
     img: 'https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-3.jpg'
   }
 ];
@@ -42,11 +42,11 @@ export default function HomePage() {
             className="max-w-3xl"
           >
             <h1 className="text-5xl md:text-7xl font-display font-bold text-[#FFFFFF] leading-tight mb-6">
-              Precision Care, <br />
-              <span className="text-[#C5A059]">Artisan Results.</span>
+              Jewelry With Identity, <br />
+              <span className="text-[#C5A059]">Made for Every Day.</span>
             </h1>
             <p className="text-xl text-[#F8FAFC] font-sans mb-10 leading-relaxed max-w-2xl">
-              Welcome to Corial. We define excellence in aesthetic and clinical health, offering personalized treatments in the heart of Maracaibo.
+              Welcome to Corial, your jewelry brand in Maracaibo with Delivery, National, and International shipping.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -54,14 +54,14 @@ export default function HomePage() {
                 id="hero-cta-primary-r9n2k4m1" 
                 className="bg-[#C5A059] text-[#FFFFFF] px-8 py-4 rounded-full font-bold text-center hover:bg-[#FFFFFF] hover:text-[#0F172A] transition-all transform hover:scale-105"
               >
-                BOOK YOUR VISIT
+                SHOP NOW
               </Link>
               <Link 
                 to="/services" 
                 id="hero-cta-secondary-v1n8k4m2"
                 className="bg-white/10 backdrop-blur-md border border-white/20 text-[#FFFFFF] px-8 py-4 rounded-full font-bold text-center hover:bg-white/20 transition-all"
               >
-                OUR EXPERTISE
+                VIEW COLLECTIONS
               </Link>
             </div>
           </motion.div>
@@ -72,10 +72,10 @@ export default function HomePage() {
       <section id="trust-strip-x2n8k4m1" className="bg-[#F8FAFC] py-12 overflow-hidden border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
-            <div className="flex items-center gap-2"><Shield className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">CLINICAL EXCELLENCE</span></div>
-            <div className="flex items-center gap-2"><Star className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">5-STAR CARE</span></div>
-            <div className="flex items-center gap-2"><Heart className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">PATIENT FOCUSED</span></div>
-            <div className="flex items-center gap-2"><Sparkles className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">ADVANCED TECH</span></div>
+            <div className="flex items-center gap-2"><Shield className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">QUALITY MATERIALS</span></div>
+            <div className="flex items-center gap-2"><Star className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">TREND-LED DESIGNS</span></div>
+            <div className="flex items-center gap-2"><Heart className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">CUSTOMER FIRST</span></div>
+            <div className="flex items-center gap-2"><Sparkles className="text-[#0F172A]" /><span className="text-lg font-bold text-[#0F172A]">PREMIUM FINISH</span></div>
           </div>
         </div>
       </section>
@@ -84,8 +84,8 @@ export default function HomePage() {
       <section id="home-services-v4n8k1m2" className="py-24 md:py-32 bg-[#FFFFFF] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0F172A] mb-6">Our Areas of Expertise</h2>
-            <p className="text-lg text-gray-600 font-sans">Combining artistic vision with clinical precision to deliver outcomes that exceed expectations.</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0F172A] mb-6">Our Core Collections</h2>
+            <p className="text-lg text-gray-600 font-sans">Stylish pieces in Acero Inoxidable and Plata 925 designed for everyday confidence.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, idx) => (
@@ -112,7 +112,7 @@ export default function HomePage() {
                     to="/services" 
                     className="flex items-center gap-2 text-[#C5A059] font-bold hover:text-[#FFFFFF] transition-colors"
                   >
-                    EXPLORE <ArrowRight size={16} />
+                    SEE MORE <ArrowRight size={16} />
                   </Link>
                 </div>
               </motion.div>
@@ -131,7 +131,7 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-display font-bold text-[#FFFFFF] mb-8">
-                Elevating Your Health Experience
+                Jewelry That Moves With You
               </h2>
               <div className="space-y-8">
                 <div className="flex gap-6">
@@ -139,8 +139,8 @@ export default function HomePage() {
                     <Star className="text-[#FFFFFF]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Excellence in Every Detail</h4>
-                    <p className="text-[#F8FAFC]/70">From our luxury waiting room to our surgical suites, we prioritize comfort and clinical rigor.</p>
+                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Design in Every Detail</h4>
+                    <p className="text-[#F8FAFC]/70">From sketch to final polish, every Corial piece is curated to stand out.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -148,8 +148,8 @@ export default function HomePage() {
                     <Shield className="text-[#FFFFFF]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Advanced Bio-materials</h4>
-                    <p className="text-[#F8FAFC]/70">We use only the highest-grade biocompatible materials, ensuring longevity and health.</p>
+                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Premium Materials</h4>
+                    <p className="text-[#F8FAFC]/70">We work with Acero Inoxidable and Plata 925 to ensure beauty and durability.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -157,8 +157,8 @@ export default function HomePage() {
                     <Heart className="text-[#FFFFFF]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Human-Centered Care</h4>
-                    <p className="text-[#F8FAFC]/70">You are not just a patient; you are a partner in our journey to refine your well-being.</p>
+                    <h4 className="text-xl font-display font-semibold text-[#FFFFFF] mb-2">Client-Centered Service</h4>
+                    <p className="text-[#F8FAFC]/70">You are not just a customer; you are part of the Corial community.</p>
                   </div>
                 </div>
               </div>
@@ -171,12 +171,12 @@ export default function HomePage() {
             >
               <img 
                 src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-4.jpg" 
-                alt="Corial Interior" 
+                alt="Corial Jewelry Showcase" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-8 left-8 bg-[#FFFFFF] p-6 rounded-2xl shadow-2xl max-w-xs">
-                <p className="text-[#0F172A] font-display font-bold text-lg mb-1">"A transformative experience in the heart of the city."</p>
-                <p className="text-[#C5A059] font-sans text-sm">— Maria Gonzalez, Patient</p>
+                <p className="text-[#0F172A] font-display font-bold text-lg mb-1">"Every piece feels premium and unique. Totally in love with Corial."</p>
+                <p className="text-[#C5A059] font-sans text-sm">— Maria Gonzalez, Customer</p>
               </div>
             </motion.div>
           </div>
@@ -189,17 +189,17 @@ export default function HomePage() {
           <div className="bg-[#0F172A] rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C5A059] to-transparent" />
             <h2 className="text-4xl md:text-6xl font-display font-bold text-[#FFFFFF] mb-8 relative z-10">
-              Ready to experience <br /><span className="text-[#C5A059]">refined care?</span>
+              Ready to shine with <br /><span className="text-[#C5A059]">Corial?</span>
             </h2>
             <p className="text-xl text-[#F8FAFC]/80 mb-10 max-w-2xl mx-auto relative z-10">
-              Join the elite group of patients who trust Corial for their most significant health and aesthetic transformations.
+              Discover jewelry pieces made to elevate your style in Maracaibo and beyond.
             </p>
             <Link
               to="/contact"
               id="cta-bottom-v8n2k1m4"
               className="inline-block bg-[#C5A059] text-[#FFFFFF] px-12 py-5 rounded-full font-bold text-xl hover:bg-[#FFFFFF] hover:text-[#0F172A] transition-all relative z-10"
             >
-              REQUEST YOUR APPOINTMENT
+              CONTACT TO ORDER
             </Link>
           </div>
         </div>

@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 const detailedServices = [
   {
     id: 'jewelry-service-national-a1b2c3d4',
-    title: 'National Sales & Distribution',
+    title: 'Mcbo Delivery',
     category: 'DOMESTIC MARKET',
-    desc: 'Serving our local clientele with personalized consultations and swift delivery across the nation. Experience the convenience of local expertise with global quality.',
+    desc: 'Fast local delivery in Maracaibo with direct support and careful packaging for every order.',
     icon: <Globe className="w-6 h-6" />,
     img: 'https://images.unsplash.com/photo-1758995115682-1452a1a9e35b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwamV3ZWxyeXxlbnwwfDB8fHwxNzc2ODcyMjYxfDA&ixlib=rb-4.1.0&q=80&w=1080'
   },
   {
     id: 'jewelry-service-international-e5f6g7h8',
-    title: 'International Export Services',
+    title: 'National & International Shipping',
     category: 'GLOBAL REACH',
-    desc: 'Expand your collection with our seamless international shipping and export solutions. We handle all logistics, customs, and secure delivery to your doorstep worldwide.',
+    desc: 'Reliable shipments across Venezuela and worldwide with secure handling from dispatch to delivery.',
     icon: <Plane className="w-6 h-6" />,
     img: 'https://images.unsplash.com/photo-1636540757189-bee470af6bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxqZXdlbHJ5JTIwaW50ZXJuYXRpb25hbHxlbnwwfDB8fHwxNzc2ODcyMjYyfDA&ixlib=rb-4.1.0&q=80&w=1080'
   },
@@ -52,7 +52,7 @@ export default function ServicesPage() {
               Exquisite Jewelry for Every <span className="text-[#C5A059]">Occasion</span>
             </h1>
             <p className="text-xl text-[#F8FAFC]/80 font-sans leading-relaxed">
-              Discover our curated collections and bespoke services, reaching customers both nationally and across the globe.
+              Explore our jewelry catalog in Acero Inoxidable and Plata 925, with delivery in Mcbo and shipping nationwide and internationally.
             </p>
           </motion.div>
         </div>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                     id={`jewelry-cta-https://images.unsplash.com/photo-1602481222849-c8f6bb1f0f38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxzZWUlMjBzZXJ2aWNlc3xlbnwwfDB8fHwxNzc2ODcyMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080-b4n1k8m2`}
                     className="inline-flex items-center gap-3 text-[#0F172A] font-bold border-b-2 border-[#C5A059] pb-1 hover:text-[#C5A059] transition-all"
                   >
-                    INQUIRE NOW <ArrowRight size={20} />
+                    ORDER NOW <ArrowRight size={20} />
                   </Link>
                 </div>
                 <div className="flex-1 w-full">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
             <div className="space-y-8">
               <h2 className="text-4xl font-display font-bold text-[#0F172A]">Craftsmanship Meets Modern Retail</h2>
               <p className="text-lg text-gray-600">
-                We combine traditional artisan techniques with modern logistics and secure online platforms to deliver exceptional jewelry worldwide.
+                Corial combines trend-led design, quality materials, and reliable logistics to deliver standout jewelry pieces anywhere.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div>

@@ -2,8 +2,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sparkles } from 'lucide-react';
+import LanguageToggle from './LanguageToggle';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -23,10 +26,10 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('nav.home'), path: '/', isNoTranslate: true },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.services'), path: '/services' },
+    { name: t('nav.contact'), path: '/contact' },
   ];
 
   const isHome = location.pathname === '/';
@@ -48,21 +51,27 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <Sparkles className={`w-8 h-8 ${isScrolled || !isHome ? 'text-[#C5A059]' : 'text-[#FFFFFF]'}`} />
-            <span className={`text-2xl font-bold font-display tracking-tight ${textColor} text-[#111111] drop-shadow-sm`}>
+            <span translate="no" className={`notranslate text-2xl font-bold font-display tracking-tight ${textColor} text-[#111111] drop-shadow-sm`}>
               CORIAL
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
+            <div className={textColor}>
+              <LanguageToggle />
+            </div>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 id={`nav-link-${link.name.toLowerCase()}-v9k1m4n2`}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C5A059] ${textColor}`}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C5A059] ${textColor} ${
+                  link.isNoTranslate ? 'notranslate' : ''
+                }`}
+                translate={link.isNoTranslate ? 'no' : 'yes'}
               >
-                {link.name.toUpperCase()}
+                {link.name}
               </Link>
             ))}
             <Link
@@ -74,7 +83,7 @@ export default function Navbar() {
                   : 'bg-[#FFFFFF] text-[#0F172A] hover:bg-[#C5A059] hover:text-[#FFFFFF]'
               }`}
             >
-              BOOK APPOINTMENT
+              {t('nav.shopNow')}
             </Link>
           </div>
 
@@ -100,12 +109,16 @@ export default function Navbar() {
           className="fixed inset-0 top-20 bg-[#FFFFFF] z-40 lg:hidden overflow-y-auto"
         >
           <div className="flex flex-col p-8 gap-6">
+            <LanguageToggle />
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 id={`mobile-nav-link-${link.name.toLowerCase()}-k4n1m8x2`}
-                className="text-2xl font-display font-semibold text-[#0F172A] hover:text-[#C5A059] border-b border-gray-100 pb-4"
+                className={`text-2xl font-display font-semibold text-[#0F172A] hover:text-[#C5A059] border-b border-gray-100 pb-4 ${
+                  link.isNoTranslate ? 'notranslate' : ''
+                }`}
+                translate={link.isNoTranslate ? 'no' : 'yes'}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
@@ -117,7 +130,7 @@ export default function Navbar() {
               className="mt-4 w-full bg-[#0F172A] text-[#FFFFFF] py-4 rounded-xl text-center font-bold tracking-wider"
               onClick={() => setMobileMenuOpen(false)}
             >
-              SCHEDULE CONSULTATION
+              {t('nav.shopCollection')}
             </Link>
           </div>
         </div>

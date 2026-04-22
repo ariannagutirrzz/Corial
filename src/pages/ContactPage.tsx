@@ -14,10 +14,10 @@ export default function ContactPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-display font-bold text-[#0F172A] mb-8 leading-tight">
-              Let's Start Your <span className="text-[#C5A059]">Journey.</span>
+              Let's Style Your <span className="text-[#C5A059]">Next Look.</span>
             </h1>
             <p className="text-xl text-gray-600 font-sans leading-relaxed">
-              Our team is ready to provide you with the personalized care you deserve. Reach out to schedule your initial consultation.
+              Contact Corial for product details, orders, and shipping support from Maracaibo to anywhere.
             </p>
           </motion.div>
         </div>
@@ -36,8 +36,8 @@ export default function ContactPage() {
                     <MapPin className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Location</h4>
-                    <p className="text-gray-600">M9HQ+242, C. 67, Maracaibo 4002, Zulia, Venezuela</p>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Base</h4>
+                    <p className="text-gray-600">Maracaibo, Venezuela</p>
                   </div>
                 </div>
 
@@ -66,8 +66,8 @@ export default function ContactPage() {
                     <Clock className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Working Hours</h4>
-                    <p className="text-gray-600">Mon - Fri: 8:00 AM - 6:00 PM <br /> Sat: 9:00 AM - 1:00 PM</p>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Shipping</h4>
+                    <p className="text-gray-600">Mcbo Delivery + Envíos Nacionales e Internacionales 📦</p>
                   </div>
                 </div>
               </div>
@@ -82,11 +82,11 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="relative">
               <div className="bg-[#0F172A] p-8 md:p-12 rounded-[2rem] shadow-2xl relative z-10">
-                <h3 className="text-3xl font-display font-bold text-[#FFFFFF] mb-8">Book Appointment</h3>
+                <h3 className="text-3xl font-display font-bold text-[#FFFFFF] mb-8">Request Your Order</h3>
                 <SiteJourneyForm 
                   formType="contact" 
                   className="space-y-6"
-                  successMessage="Thank you for choosing Corial. We will contact you shortly to confirm your visit."
+                  successMessage="Thanks for contacting Corial. We will reply shortly with product and shipping details."
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -121,15 +121,15 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Interested Service</label>
+                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Interested Product</label>
                     <select 
                       name="service" 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
                     >
-                      <option className="text-black">Aesthetic Dentistry</option>
-                      <option className="text-black">Orthodontics</option>
-                      <option className="text-black">Rehabilitation</option>
-                      <option className="text-black">Other Consultations</option>
+                      <option className="text-black">Acero Inoxidable</option>
+                      <option className="text-black">Plata 925</option>
+                      <option className="text-black">Gift Set</option>
+                      <option className="text-black">Other Piece</option>
                     </select>
                   </div>
                   <div className="space-y-2">
@@ -138,14 +138,14 @@ export default function ContactPage() {
                       name="message" 
                       rows={4} 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
-                      placeholder="How can we help you?"
+                      placeholder="Tell us what piece you are looking for..."
                     ></textarea>
                   </div>
                   <button 
                     type="submit" 
                     className="w-full bg-[#C5A059] py-4 rounded-xl font-bold hover:bg-[#FFFFFF] hover:text-[#0F172A] transition-all transform active:scale-95 text-[#111111]"
                   >
-                    SEND REQUEST
+                    SEND MESSAGE
                   </button>
                 </SiteJourneyForm>
               </div>
@@ -158,11 +158,11 @@ export default function ContactPage() {
       {/* Office Photo Section */}
       <section id="contact-gallery-v8n1k3m2" className="py-24 bg-[#F8FAFC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-3xl font-display font-bold text-[#0F172A] mb-12">Experience Our Space</h3>
+          <h3 className="text-3xl font-display font-bold text-[#0F172A] mb-12">Explore Our Jewelry Style</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-6.jpg" alt="Reception" className="rounded-2xl shadow-lg aspect-square object-cover" />
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-4.jpg" alt="Lounge" className="rounded-2xl shadow-lg aspect-square object-cover" />
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-9.jpg" alt="Clinical Suite" className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-6.jpg" alt="Jewelry display 1" className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-4.jpg" alt="Jewelry display 2" className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-9.jpg" alt="Jewelry display 3" className="rounded-2xl shadow-lg aspect-square object-cover" />
           </div>
         </div>
       </section>
