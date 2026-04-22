@@ -17,9 +17,9 @@ void i18n.use(initReactI18next).init({
       translation: {
         nav: {
           home: 'HOME',
-          about: 'About',
-          services: 'Services',
-          contact: 'Contact',
+          about: 'ABOUT',
+          services: 'SERVICES',
+          contact: 'CONTACT',
           shopNow: 'SHOP NOW',
           shopCollection: 'SHOP COLLECTION',
         },
@@ -182,9 +182,9 @@ void i18n.use(initReactI18next).init({
       translation: {
         nav: {
           home: 'HOME',
-          about: 'Nosotros',
-          services: 'Colecciones',
-          contact: 'Contacto',
+          about: 'NOSOTROS',
+          services: 'COLECCIONES',
+          contact: 'CONTACTO',
           shopNow: 'COMPRAR',
           shopCollection: 'VER COLECCION',
         },
