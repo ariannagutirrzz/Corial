@@ -1,43 +1,50 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Globe, Plane, Gem, Handshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const detailedServices = [
-  {
-    id: 'jewelry-service-national-a1b2c3d4',
-    title: 'Mcbo Delivery',
-    category: 'DOMESTIC MARKET',
-    desc: 'Fast local delivery in Maracaibo with direct support and careful packaging for every order.',
-    icon: <Globe className="w-6 h-6" />,
-    img: 'https://images.unsplash.com/photo-1758995115682-1452a1a9e35b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwamV3ZWxyeXxlbnwwfDB8fHwxNzc2ODcyMjYxfDA&ixlib=rb-4.1.0&q=80&w=1080'
-  },
-  {
-    id: 'jewelry-service-international-e5f6g7h8',
-    title: 'National & International Shipping',
-    category: 'GLOBAL REACH',
-    desc: 'Reliable shipments across Venezuela and worldwide with secure handling from dispatch to delivery.',
-    icon: <Plane className="w-6 h-6" />,
-    img: 'https://images.unsplash.com/photo-1636540757189-bee470af6bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxqZXdlbHJ5JTIwaW50ZXJuYXRpb25hbHxlbnwwfDB8fHwxNzc2ODcyMjYyfDA&ixlib=rb-4.1.0&q=80&w=1080'
-  },
-  {
-    id: 'jewelry-service-bespoke-i9j0k1l2',
-    title: 'Bespoke Jewelry Design',
-    category: 'CUSTOM CREATIONS',
-    desc: 'Collaborate with our master jewelers to bring your unique vision to life. From concept to creation, we craft one-of-a-kind pieces tailored to your desires.',
-    icon: <Gem className="w-6 h-6" />,
-    img: 'https://images.unsplash.com/photo-1628926379890-ad25d3b6a566?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxjdXN0b20lMjBkZXNpZ25lZCUyMHVuaXF1ZSUyMGpld2VscnklMjBwaWVjZXxlbnwwfDB8fHwxNzc2ODcyMjYyfDA&ixlib=rb-4.1.0&q=80&w=1080'
-  },
-  {
-    id: 'jewelry-service-wholesale-m3n4o5p6',
-    title: 'Wholesale & Partnerships',
-    category: 'BUSINESS SOLUTIONS',
-    desc: 'Form strategic alliances with us for bulk orders and exclusive collections. We offer competitive pricing and dedicated support for our wholesale partners.',
-    icon: <Handshake className="w-6 h-6" />,
-    img: 'https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGpld2VscnklMjB3aG9sZXNhbGV8ZW58MHwwfHx8MTc3Njg3MjI2Mnww&ixlib=rb-4.1.0&q=80&w=1080'
-  }
-];
+type ServiceCard = {
+  id: string;
+  title: string;
+  category: string;
+  desc: string;
+  icon: JSX.Element;
+  img: string;
+};
 
 export default function ServicesPage() {
+  const { t } = useTranslation();
+  const translatedCards = t('servicesPage.cards', { returnObjects: true }) as Array<{
+    title: string;
+    category: string;
+    desc: string;
+  }>;
+  const detailedServices: ServiceCard[] = [
+    {
+      id: 'jewelry-service-national-a1b2c3d4',
+      ...translatedCards[0],
+      icon: <Globe className="w-6 h-6" />,
+      img: 'https://images.unsplash.com/photo-1758995115682-1452a1a9e35b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwamV3ZWxyeXxlbnwwfDB8fHwxNzc2ODcyMjYxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    },
+    {
+      id: 'jewelry-service-international-e5f6g7h8',
+      ...translatedCards[1],
+      icon: <Plane className="w-6 h-6" />,
+      img: 'https://images.unsplash.com/photo-1636540757189-bee470af6bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxqZXdlbHJ5JTIwaW50ZXJuYXRpb25hbHxlbnwwfDB8fHwxNzc2ODcyMjYyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    },
+    {
+      id: 'jewelry-service-bespoke-i9j0k1l2',
+      ...translatedCards[2],
+      icon: <Gem className="w-6 h-6" />,
+      img: 'https://images.unsplash.com/photo-1628926379890-ad25d3b6a566?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxjdXN0b20lMjBkZXNpZ25lZCUyMHVuaXF1ZSUyMGpld2VscnklMjBwaWVjZXxlbnwwfDB8fHwxNzc2ODcyMjYyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    },
+    {
+      id: 'jewelry-service-wholesale-m3n4o5p6',
+      ...translatedCards[3],
+      icon: <Handshake className="w-6 h-6" />,
+      img: 'https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGpld2VscnklMjB3aG9sZXNhbGV8ZW58MHwwfHx8MTc3Njg3MjI2Mnww&ixlib=rb-4.1.0&q=80&w=1080',
+    },
+  ];
   return (
     <main id="services-page-container-v2n8k4m1" className="pt-20">
       {/* Header */}
@@ -49,10 +56,10 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-display font-bold text-[#FFFFFF] mb-8 leading-tight">
-              Exquisite Jewelry for Every <span className="text-[#C5A059]">Occasion</span>
+              {t('servicesPage.titleTop')} <span className="text-[#C5A059]">{t('servicesPage.titleAccent')}</span>
             </h1>
             <p className="text-xl text-[#F8FAFC]/80 font-sans leading-relaxed">
-              Explore our jewelry catalog in Acero Inoxidable and Plata 925, with delivery in Mcbo and shipping nationwide and internationally.
+              {t('servicesPage.description')}
             </p>
           </motion.div>
         </div>
@@ -86,7 +93,7 @@ export default function ServicesPage() {
                     id={`jewelry-cta-https://images.unsplash.com/photo-1602481222849-c8f6bb1f0f38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODY5NjV8MHwxfHNlYXJjaHwxfHxzZWUlMjBzZXJ2aWNlc3xlbnwwfDB8fHwxNzc2ODcyMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080-b4n1k8m2`}
                     className="inline-flex items-center gap-3 text-[#0F172A] font-bold border-b-2 border-[#C5A059] pb-1 hover:text-[#C5A059] transition-all"
                   >
-                    ORDER NOW <ArrowRight size={20} />
+                    {t('servicesPage.orderNow')} <ArrowRight size={20} />
                   </Link>
                 </div>
                 <div className="flex-1 w-full">
@@ -121,18 +128,18 @@ export default function ServicesPage() {
               />
             </motion.div>
             <div className="space-y-8">
-              <h2 className="text-4xl font-display font-bold text-[#0F172A]">Craftsmanship Meets Modern Retail</h2>
+              <h2 className="text-4xl font-display font-bold text-[#0F172A]">{t('servicesPage.processTitle')}</h2>
               <p className="text-lg text-gray-600">
-                Corial combines trend-led design, quality materials, and reliable logistics to deliver standout jewelry pieces anywhere.
+                {t('servicesPage.processDescription')}
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-[#C5A059] font-bold mb-2 uppercase tracking-tighter text-sm">Global Logistics</h4>
-                  <p className="text-sm text-gray-500">Efficient, secure shipping to any destination.</p>
+                  <h4 className="text-[#C5A059] font-bold mb-2 uppercase tracking-tighter text-sm">{t('servicesPage.logisticsTitle')}</h4>
+                  <p className="text-sm text-gray-500">{t('servicesPage.logisticsDescription')}</p>
                 </div>
                 <div>
-                  <h4 className="text-[#C5A059] font-bold mb-2 uppercase tracking-tighter text-sm">Secure Transactions</h4>
-                  <p className="text-sm text-gray-500">Protected online payments and data privacy.</p>
+                  <h4 className="text-[#C5A059] font-bold mb-2 uppercase tracking-tighter text-sm">{t('servicesPage.secureTitle')}</h4>
+                  <p className="text-sm text-gray-500">{t('servicesPage.secureDescription')}</p>
                 </div>
               </div>
             </div>

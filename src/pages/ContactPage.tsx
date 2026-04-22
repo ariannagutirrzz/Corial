@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Instagram } from 'lucide-react';
 import SiteJourneyForm from '../components/SiteJourneyForm';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   return (
     <main id="contact-page-container-v4n8k1m2" className="pt-20">
       {/* Hero Contact */}
@@ -14,10 +16,10 @@ export default function ContactPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-display font-bold text-[#0F172A] mb-8 leading-tight">
-              Let's Style Your <span className="text-[#C5A059]">Next Look.</span>
+              {t('contact.heroTitleTop')} <span className="text-[#C5A059]">{t('contact.heroTitleAccent')}</span>
             </h1>
             <p className="text-xl text-gray-600 font-sans leading-relaxed">
-              Contact Corial for product details, orders, and shipping support from Maracaibo to anywhere.
+              {t('contact.heroDescription')}
             </p>
           </motion.div>
         </div>
@@ -36,7 +38,7 @@ export default function ContactPage() {
                     <MapPin className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Base</h4>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">{t('contact.baseTitle')}</h4>
                     <p className="text-gray-600">Maracaibo, Venezuela</p>
                   </div>
                 </div>
@@ -46,7 +48,7 @@ export default function ContactPage() {
                     <Phone className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Phone</h4>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">{t('contact.phoneTitle')}</h4>
                     <p className="text-gray-600">0261 4180088</p>
                   </div>
                 </div>
@@ -56,7 +58,7 @@ export default function ContactPage() {
                     <Mail className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Email</h4>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">{t('contact.emailTitle')}</h4>
                     <p className="text-gray-600">somoscorialmcbo@gmail.com</p>
                   </div>
                 </div>
@@ -66,14 +68,14 @@ export default function ContactPage() {
                     <Clock className="text-[#C5A059]" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">Shipping</h4>
-                    <p className="text-gray-600">Mcbo Delivery + Envíos Nacionales e Internacionales 📦</p>
+                    <h4 className="text-xl font-display font-bold text-[#0F172A] mb-1">{t('contact.shippingTitle')}</h4>
+                    <p className="text-gray-600">{t('contact.shippingValue')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center gap-6 p-8">
-                <p className="font-bold text-[#0F172A]">FOLLOW OUR UPDATES</p>
+                <p className="font-bold text-[#0F172A]">{t('contact.socialTitle')}</p>
                 <div className="h-px flex-1 bg-gray-200" />
                 <a href="#" className="text-[#0F172A] hover:text-[#C5A059] transition-colors"><Instagram size={24} /></a>
               </div>
@@ -82,70 +84,70 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="relative">
               <div className="bg-[#0F172A] p-8 md:p-12 rounded-[2rem] shadow-2xl relative z-10">
-                <h3 className="text-3xl font-display font-bold text-[#FFFFFF] mb-8">Request Your Order</h3>
+                <h3 className="text-3xl font-display font-bold text-[#FFFFFF] mb-8">{t('contact.formTitle')}</h3>
                 <SiteJourneyForm 
                   formType="contact" 
                   className="space-y-6"
-                  successMessage="Thanks for contacting Corial. We will reply shortly with product and shipping details."
+                  successMessage={t('contact.formSuccess')}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Full Name</label>
+                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">{t('contact.fullName')}</label>
                       <input 
                         name="name" 
                         type="text" 
                         required 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
-                        placeholder="John Doe"
+                        placeholder={t('contact.inputNamePlaceholder')}
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Phone Number</label>
+                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">{t('contact.phoneNumber')}</label>
                       <input 
                         name="phone" 
                         type="tel" 
                         required 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
-                        placeholder="+58 4XX XXX XXXX"
+                        placeholder={t('contact.inputPhonePlaceholder')}
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Email Address</label>
+                    <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">{t('contact.emailAddress')}</label>
                     <input 
                       name="email" 
                       type="email" 
                       required 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
-                      placeholder="john@example.com"
+                      placeholder={t('contact.inputEmailPlaceholder')}
                     />
                   </div>
                   <div className="space-y-2">
-                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Interested Product</label>
+                      <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">{t('contact.interestedProduct')}</label>
                     <select 
                       name="service" 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
                     >
-                      <option className="text-black">Acero Inoxidable</option>
-                      <option className="text-black">Plata 925</option>
-                      <option className="text-black">Gift Set</option>
-                      <option className="text-black">Other Piece</option>
+                      <option className="text-black">{t('contact.products.steel')}</option>
+                      <option className="text-black">{t('contact.products.silver')}</option>
+                      <option className="text-black">{t('contact.products.giftSet')}</option>
+                      <option className="text-black">{t('contact.products.other')}</option>
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">Message</label>
+                    <label className="text-[#F8FAFC]/70 text-xs font-bold tracking-widest uppercase">{t('contact.message')}</label>
                     <textarea 
                       name="message" 
                       rows={4} 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#FFFFFF] focus:border-[#C5A059] outline-none transition-all"
-                      placeholder="Tell us what piece you are looking for..."
+                      placeholder={t('contact.messagePlaceholder')}
                     ></textarea>
                   </div>
                   <button 
                     type="submit" 
                     className="w-full bg-[#C5A059] py-4 rounded-xl font-bold hover:bg-[#FFFFFF] hover:text-[#0F172A] transition-all transform active:scale-95 text-[#111111]"
                   >
-                    SEND MESSAGE
+                    {t('contact.sendMessage')}
                   </button>
                 </SiteJourneyForm>
               </div>
@@ -158,11 +160,11 @@ export default function ContactPage() {
       {/* Office Photo Section */}
       <section id="contact-gallery-v8n1k3m2" className="py-24 bg-[#F8FAFC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-3xl font-display font-bold text-[#0F172A] mb-12">Explore Our Jewelry Style</h3>
+          <h3 className="text-3xl font-display font-bold text-[#0F172A] mb-12">{t('contact.galleryTitle')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-6.jpg" alt="Jewelry display 1" className="rounded-2xl shadow-lg aspect-square object-cover" />
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-4.jpg" alt="Jewelry display 2" className="rounded-2xl shadow-lg aspect-square object-cover" />
-            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-9.jpg" alt="Jewelry display 3" className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-6.jpg" alt={t('contact.galleryAlt1')} className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-4.jpg" alt={t('contact.galleryAlt2')} className="rounded-2xl shadow-lg aspect-square object-cover" />
+            <img src="https://api.sitejourney.ai/storage/v1/object/public/site-assets/dbb4c246-8ecf-426e-a80f-6fa69a2f0567/pending-1776871852015/photo-9.jpg" alt={t('contact.galleryAlt3')} className="rounded-2xl shadow-lg aspect-square object-cover" />
           </div>
         </div>
       </section>
